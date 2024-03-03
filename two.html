@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+button{
+    margin: 30px;
+}
+</style>
+<body>
+    <div class="container" style="background-color:black; width:100%; height:300px;">
+        <button onclick="addition()" class="increment">Increment</button>
+        <h1 class="count">zero</h1>
+        <button onclick="subtraction()" class="decrement">Decrement</button>
+    </div>
+    
+</body>
+<script>
+    let arr = ['zero','one','two','three','four','five','six'] 
+    console.log(arr.length)
+    let count = 0
+    const addition = () =>{
+        if (count>=0 && count < arr.length-1){
+            count = count + 1
+            console.log(count)
+            document.querySelector(".count").innerText = arr[count]
+
+        }
+    }
+    const subtraction =()=>{
+        if (count>0){
+            count = count-1
+            document.querySelector('.count').innerText = arr[count]
+        }
+        else {
+            return alert('value cannot be less than zero')
+        }
+    }
+
+
+
+
+
+
+    // const test= (operation) => {
+    //     let a = 0
+    //     if(operation=="incr"){
+    //         let count = a+1
+    //         document.querySelector('.count').innerText = b
+    //     }
+    //     else if (operation == "decr")
+    //         count = a-1
+    //          document.querySelector('.count').innerText = b
+
+
+    // }
+
+    // const test = () =>{
+    //     let a = 0
+    //     for(i=0; i<=50; i++){
+    //         const count = () =>{
+    //             let count = a + i
+    //             console.log(count)
+    //             return   
+    //         }
+    //         document.querySelector('.count').innerText = a   
+    //     }
+    //     return
+    // }
+   
+    // let a = 0
+    // console.log(a)
+    // const increment = () =>{
+    //     for(i=0; i<=50; i++){
+    //         return i 
+    //     }
+    //     console.log(a+i)
+    // }
+
+</script>
+</html>
